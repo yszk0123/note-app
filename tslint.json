@@ -9,6 +9,7 @@
     "exclude": ["config/**/*.js", "node_modules/**/*.ts"]
   },
   "rules": {
-    "prettier": true
+    "prettier": true,
+    "interface-name": false
   }
 }

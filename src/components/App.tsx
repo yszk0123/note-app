@@ -1,6 +1,10 @@
 import * as React from 'react';
 import './App.css';
 
-export const App = () => {
-  return <div>Note</div>;
+interface Props {
+  appName: string;
+}
+
+export const App: React.SFC<Props> = ({ appName }) => {
+  return <div>{appName}</div>;
 };
