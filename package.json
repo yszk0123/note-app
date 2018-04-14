@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@firebase/app": "^0.1.10",
+    "@firebase/firestore": "^0.3.7",
     "@types/react-redux": "^5.0.16",
+    "firebaseui": "^2.7.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-redux": "^5.0.7",
