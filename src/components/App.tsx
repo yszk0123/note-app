@@ -1,27 +1,29 @@
 import * as React from 'react';
+import { NoteState } from '../queries/NoteModel';
+import { UserState } from '../queries/UserModel';
 import './App.css';
 import { SignInScreen } from './SignInScreen';
 
 interface Props {
-  login: string | null;
+  user: UserState;
   init: boolean;
-  text: string;
+  notes: NoteState[];
 }
 
 const Loading = () => <div>Loading...</div>;
 
-export const App: React.SFC<Props> = ({ login, init, text }) => {
+export const App: React.SFC<Props> = ({ user, init, notes }) => {
   if (!init) {
     return <Loading />;
   }
-  if (!login) {
+  if (!user) {
     return <SignInScreen />;
   }
 
   return (
     <div>
-      Hello, {login}!
-      <textarea value={text} />
+      Hello, {user.displayName}!
+      {notes.map(note => note && <div key={note.noteId}>{note.text}</div>)}
     </div>
   );
 };

@@ -1,12 +1,21 @@
 import { connect } from 'react-redux';
 import { App } from '../components/App';
-import { RootState } from '../queries/RootModel';
+import {
+  RootState,
+  selectFirebase,
+  selectNotes,
+  selectUser
+} from '../queries/RootModel';
 
 function mapStateToProps(state: RootState) {
+  const user = selectUser(state);
+  const firebase = selectFirebase(state);
+  const notes = selectNotes(state);
+
   return {
-    login: state.user && state.user.displayName,
-    init: state.firebase.init,
-    text: '' // TODO: state.entities.notes.byId
+    user,
+    init: firebase.init,
+    notes
   };
 }
 
