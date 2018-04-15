@@ -1,3 +1,5 @@
+import '@firebase/auth';
+import '@firebase/firestore';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';

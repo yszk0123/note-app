@@ -1,5 +1,10 @@
 import { ActionType } from '../constants/ActionType';
-import { InitFirebaseAction, SignInAction, SignOutAction } from '../types';
+import {
+  EditAction,
+  InitFirebaseAction,
+  SignInAction,
+  SignOutAction
+} from '../types';
 
 export const initFirebase = (): InitFirebaseAction => ({
   type: ActionType.INIT_FIREBASE
@@ -11,3 +16,8 @@ export const signIn = (username: string): SignInAction => ({
 });
 
 export const signOut = (): SignOutAction => ({ type: ActionType.SIGN_OUT });
+
+export const edit = (text: string): EditAction => ({
+  type: ActionType.EDIT,
+  payload: { text }
+});

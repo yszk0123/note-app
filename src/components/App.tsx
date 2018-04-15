@@ -6,11 +6,12 @@ interface Props {
   appName: string;
   login: string | null;
   init: boolean;
+  text: string;
 }
 
 const Loading = () => <div>Loading...</div>;
 
-export const App: React.SFC<Props> = ({ appName, login, init }) => {
+export const App: React.SFC<Props> = ({ appName, login, init, text }) => {
   if (!init) {
     return <Loading />;
   }
@@ -22,6 +23,7 @@ export const App: React.SFC<Props> = ({ appName, login, init }) => {
     <div>
       <h1>{appName}</h1>
       Hello, {login}!
+      <textarea value={text} />
     </div>
   );
 };

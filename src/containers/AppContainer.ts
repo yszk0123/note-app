@@ -3,7 +3,12 @@ import { App } from '../components/App';
 import { RootState } from '../types';
 
 function mapStateToProps(state: RootState) {
-  return { appName: state.appName, login: state.login, init: state.init };
+  return {
+    appName: state.appName,
+    login: state.login,
+    init: state.init,
+    text: state.text
+  };
 }
 
 export const AppContainer = connect(mapStateToProps)(App);
