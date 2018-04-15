@@ -3,7 +3,6 @@ import './App.css';
 import { SignInScreen } from './SignInScreen';
 
 interface Props {
-  appName: string;
   login: string | null;
   init: boolean;
   text: string;
@@ -11,7 +10,7 @@ interface Props {
 
 const Loading = () => <div>Loading...</div>;
 
-export const App: React.SFC<Props> = ({ appName, login, init, text }) => {
+export const App: React.SFC<Props> = ({ login, init, text }) => {
   if (!init) {
     return <Loading />;
   }
@@ -21,7 +20,6 @@ export const App: React.SFC<Props> = ({ appName, login, init, text }) => {
 
   return (
     <div>
-      <h1>{appName}</h1>
       Hello, {login}!
       <textarea value={text} />
     </div>

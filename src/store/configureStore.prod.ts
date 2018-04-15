@@ -1,6 +1,5 @@
 import { applyMiddleware, createStore } from 'redux';
-import { reducer } from '../reducers';
-import { saga } from '../sagas';
+import { reducer, saga } from '../mutations';
 import { createSagaMiddleware } from './createSagaMiddleware';
 
 export const configureStore = () => {

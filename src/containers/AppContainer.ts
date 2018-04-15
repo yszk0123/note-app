@@ -1,13 +1,12 @@
 import { connect } from 'react-redux';
 import { App } from '../components/App';
-import { RootState } from '../types';
+import { RootState } from '../queries/RootModel';
 
 function mapStateToProps(state: RootState) {
   return {
-    appName: state.appName,
-    login: state.login,
-    init: state.init,
-    text: state.text
+    login: state.user && state.user.displayName,
+    init: state.firebase.init,
+    text: '' // TODO: state.entities.notes.byId
   };
 }
 
