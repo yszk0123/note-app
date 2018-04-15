@@ -2,6 +2,7 @@
   "name": "note",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://yszk0123.github.io/note",
   "dependencies": {
     "@firebase/app": "^0.1.10",
     "@firebase/firestore": "^0.3.7",
@@ -20,8 +21,8 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "lint": "tslint -p tsconfig.json",
-    "deploy": "run-s lint build deploy:gh-pages",
-    "deploy:gh-pages": "push-dir --dir=dist --branch=gh-pages"
+    "predeploy": "npm-run-all build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@types/jest": "^22.2.3",
@@ -29,9 +30,9 @@
     "@types/react": "^16.3.10",
     "@types/react-dom": "^16.0.5",
     "@types/redux-logger": "^3.0.5",
+    "gh-pages": "^1.1.0",
     "npm-run-all": "^4.1.2",
     "prettier": "^1.12.0",
-    "push-dir": "^0.4.1",
     "redux-logger": "^3.0.6",
     "tslint": "^5.9.1",
     "tslint-config-prettier": "^1.10.0",
