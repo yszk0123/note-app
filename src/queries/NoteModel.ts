@@ -12,7 +12,7 @@ export type NoteEntity = Entity<UUID, NoteState>;
 // Action
 
 export enum NoteActionType {
-  EDIT = 'EDIT'
+  EDIT = 'note/EDIT'
 }
 
 interface EditAction {

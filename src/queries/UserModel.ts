@@ -8,8 +8,8 @@ export type UserState = {
 } | null;
 
 export enum UserActionType {
-  SIGN_UP = 'SIGN_UP',
-  SIGN_OUT = 'SIGN_OUT'
+  SIGN_UP = 'user/SIGN_UP',
+  SIGN_OUT = 'user/SIGN_OUT'
 }
 
 // Action

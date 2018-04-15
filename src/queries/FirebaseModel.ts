@@ -7,7 +7,7 @@ export interface FirebaseState {
 // Action
 
 export enum FirebaseActionType {
-  INIT_FIREBASE = 'INIT_FIREBASE'
+  INIT_FIREBASE = 'firebase/INIT_FIREBASE'
 }
 
 interface InitFirebaseAction {
