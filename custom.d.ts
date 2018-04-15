@@ -1,3 +1,3 @@
 declare type FIXME = any;
 
-declare module 'firebaseui';
+declare module 'react-firebaseui';
