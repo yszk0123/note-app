@@ -1,4 +1,4 @@
-import { Entity, UUID } from '../types/CommonType';
+import { Entity, UUID } from '../../types/CommonType';
 
 // State
 

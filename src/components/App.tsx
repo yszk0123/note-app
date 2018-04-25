@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { NoteState } from '../queries/NoteModel';
-import { UserState } from '../queries/UserModel';
+import { NoteState } from '../store/queries/NoteModel';
+import { UserState } from '../store/queries/UserModel';
 import './App.css';
 import { SignInScreen } from './SignInScreen';
 

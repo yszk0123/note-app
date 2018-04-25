@@ -1,6 +1,6 @@
 import { applyMiddleware, createStore } from 'redux';
 import sagaMiddlewareFactory from 'redux-saga';
-import { reducer, saga } from '../mutations';
+import { reducer, saga } from './mutations';
 
 export const configureStore = () => {
   const sagaMiddleware = sagaMiddlewareFactory();

@@ -1,4 +1,4 @@
-import { UUID } from '../types/CommonType';
+import { UUID } from '../../types/CommonType';
 
 // State
 

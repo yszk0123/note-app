@@ -5,7 +5,7 @@ import {
   selectFirebase,
   selectNotes,
   selectUser
-} from '../queries/RootModel';
+} from '../store/queries/RootModel';
 
 function mapStateToProps(state: RootState) {
   const user = selectUser(state);
