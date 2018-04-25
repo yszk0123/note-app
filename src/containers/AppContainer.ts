@@ -1,11 +1,6 @@
 import { connect } from 'react-redux';
 import { App } from '../components/App';
-import {
-  RootState,
-  selectFirebase,
-  selectNotes,
-  selectUser
-} from '../store/queries/RootModel';
+import { RootState, selectFirebase, selectNotes, selectUser } from '../store';
 
 function mapStateToProps(state: RootState) {
   const user = selectUser(state);
