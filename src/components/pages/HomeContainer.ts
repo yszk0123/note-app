@@ -1,6 +1,11 @@
 import { connect } from 'react-redux';
-import { App } from '../components/App';
-import { RootState, selectFirebase, selectNotes, selectUser } from '../store';
+import {
+  RootState,
+  selectFirebase,
+  selectNotes,
+  selectUser
+} from '../../store';
+import { Home } from './Home';
 
 function mapStateToProps(state: RootState) {
   const user = selectUser(state);
@@ -14,4 +19,4 @@ function mapStateToProps(state: RootState) {
   };
 }
 
-export const AppContainer = connect(mapStateToProps)(App);
+export const HomeContainer = connect(mapStateToProps)(Home);

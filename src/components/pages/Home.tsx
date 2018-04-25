@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { NoteState, UserState } from '../store';
-import './App.css';
-import { SignInScreen } from './SignInScreen';
+import { NoteState, UserState } from '../../store';
+import { SignInScreen } from '../molecules';
+import './Home.css';
 
 interface Props {
   user: UserState;
@@ -11,7 +11,7 @@ interface Props {
 
 const Loading = () => <div>Loading...</div>;
 
-export const App: React.SFC<Props> = ({ user, init, notes }) => {
+export const Home: React.SFC<Props> = ({ user, init, notes }) => {
   if (!init) {
     return <Loading />;
   }

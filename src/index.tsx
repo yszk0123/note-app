@@ -3,18 +3,22 @@ import '@firebase/firestore';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { AppContainer } from './containers/AppContainer';
+import { HomeContainer } from './components/pages';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import { configureStore } from './store';
 
 const store = configureStore();
 
+function Routes() {
+  return <HomeContainer />;
+}
+
 ReactDOM.render(
   <Provider store={store}>
-    <AppContainer />
+    <Routes />
   </Provider>,
-  document.getElementById('root') as HTMLElement
+  document.getElementById('root')
 );
 
 registerServiceWorker();
